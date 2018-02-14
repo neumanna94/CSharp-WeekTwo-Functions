@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Palindromes + Find and Replace</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <link rel='stylesheet' href="~/css/styles.css">
+  </head>
+<body>
+    <div class = "container">
+        <div class = "jumbotron">
+            <h1>Palindromes, FindReplace Functions</h1>
+        </div>
+        <div class = "row">
+            <div class = "col-md-12">
+              <form id = "functionSelector">
+                <select class="form-control" id="function">
+                  <option value="palindromes">Palindromes</option>
+                  <option value="fr">Find and Replace</option>
+                  <option value="rpsai">Rock paper Scissors Single Player</option>
+                <option value="rps">Rock Paper Scissors Two Player</option>
+                </select>
+              </form>
+                <form id = "palindromes">
+                <div id = "inputField">
+                  <label for="inputString"><h6><strong>Input: </strong></h6></label>
+                  <input id="inputString" class="form-control" type="text" placeholder="Input:">
+                </div>
+                <div id = "findField">
+                  <label for="findString"><h6><strong>Enter a string to Find: </strong></h6></label>
+                  <input id="findString" class="form-control" type="text" placeholder="Enter a string to Find:">
+                </div>
+                <div id = "rpsPlayerOneField">
+                  <label for="rpsPlayerOne"><h6><strong>Enter what you want to replace with: </strong></h6></label>
+                  <input id="rpsPlayerOne" class="form-control" type="text" placeholder="Enter what you want to replace with:">
+                </div>
+                <div id = "rpsPlayerTwoField">
+                  <label for="rpsPlayerTwo"><h6><strong>Enter what you want to replace with: </strong></h6></label>
+                  <input id="rpsPlayerTwo" class="form-control" type="text" placeholder="Enter what you want to replace with:">
+                </div>
+                <button type="submit" class ="btn" id="Submit">Execute</button>
+              </form>
+            </div>
+    </div>
+</body>
+<script type="text/javascript">
+var functionSelector = 0;
+
+function toggle(){
+  $("#findField").toggle();
+  $("#replaceField").toggle();
+}
+$(document).ready(function(){
+  $("form#palindromes").submit(function(event) {
+    event.preventDefault();
+    var findString = $("#findString").val();
+    var replaceString = $("#replaceString").val();
+
+  });
+  $("form#functionSelector").change(function(){
+    event.preventDefault();
+    toggle();
+    var currFunction = $("#function").val();
+    if(currFunction == "palindromes"){
+      functionSelector = 0;
+    } else if(currFunction == "fr"){
+      functionSelector = 1;
+    }
+    });
+    $("form#palindromes").submit(function(event) {
+        event.preventDefault();
+        var playerOne = $("#rpsPlayerOne").val();
+        var playerTwo =$("#rpsPlayerTwo").val();
+    });
+
+});
+</script>
