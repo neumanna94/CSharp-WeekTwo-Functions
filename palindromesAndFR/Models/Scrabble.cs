@@ -12,7 +12,6 @@ namespace PalinAndFR.Models
     public class Scrabble
     {
         private string _myCurrentString;
-        private int _scrabbleScore = 0;
 
         public Scrabble(string inputString)
         {
@@ -22,13 +21,13 @@ namespace PalinAndFR.Models
         {
             return _myCurrentString;
         }
-        public string GetScore()
-        {
-          return _scrabbleScore.ToString();
-        }
         public void SetString(string inputString)
         {
             _myCurrentString = inputString;
+        }
+        public string HtmlResult()
+        {
+          return ScrabbleScore().ToString();
         }
         public int ScrabbleScore()
         {
@@ -38,7 +37,6 @@ namespace PalinAndFR.Models
             {
                 sum += LetterScore(myInputString[i]);
             }
-            _scrabbleScore = sum;
             return sum;
         }
 

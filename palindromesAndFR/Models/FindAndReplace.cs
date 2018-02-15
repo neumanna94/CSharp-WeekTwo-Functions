@@ -14,6 +14,10 @@ namespace PalinAndFR.Models
             _find = find;
             _replace = replace;
         }
+        public string HtmlResult()
+        {
+          return FindReplace();
+        }
         public string FindReplace()
         {
             List<string> splitList = splitter(" ");

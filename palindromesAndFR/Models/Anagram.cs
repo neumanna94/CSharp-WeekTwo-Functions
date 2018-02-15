@@ -12,6 +12,10 @@ namespace PalinAndFR.Models
             _currString = inputString;
             GenerateListOfAnagrams();
         }
+        public string HtmlResult()
+        {
+          return returnListAsString();
+        }
         public void GenerateListOfAnagrams()
         {
             char[] newString = _currString.ToCharArray();

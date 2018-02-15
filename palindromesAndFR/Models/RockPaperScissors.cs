@@ -17,6 +17,11 @@ namespace PalinAndFR.Models
         {
             _playerTwoMove = moveIn;
         }
+
+        public string HtmlResult()
+        {
+          return CheckWinner();
+        }
         public void AIPlay()
         {
             RandomGeneratePlayerTwo();

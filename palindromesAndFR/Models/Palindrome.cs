@@ -11,6 +11,10 @@ namespace PalinAndFR.Models
         {
             _myCurrentString = inputString;
         }
+        public string HtmlResult()
+        {
+          return _isPalindrome.ToString();
+        }
 
         public void SetString(string inputString)
         {

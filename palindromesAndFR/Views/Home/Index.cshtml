@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -72,26 +73,31 @@
         </div>
         <div class="row">
           <div class="col-md-12" id="results">
-            <h3>This is the resultpage </h3>
-          </div>
+            @if (Model != null)
+            {
+              <h3>Results</h3>
+              <h3>Function Output: @Model.HtmlResult();</h3>
+              @Console.WriteLine(@Model.HtmlResult());
 
+            }
+          </div>
         </div>
       </div>
 
 </body>
 <script type="text/javascript">
 function toggle(){
-  $("#palindromes").hide();
+  $("palindromes").hide();
   $("#fr").hide();
   $("#rps").hide();
   $("#anagram").hide();
   $("#scrabble").hide();
   $("#rpsai").hide();
-  $("#results").hide();
 }
+
 $(document).ready(function(){
   toggle();
-  $("#palindromes").show();
+  console.log("ready");
   $("#functionSelect").change(function(){
     event.preventDefault();
     toggle();
