@@ -6,3 +6,11 @@
 /Users/Guest/Desktop/palindromesFindAndReplace/palindromesAndFR/obj/Debug/netcoreapp1.1/PalinAndFR.AssemblyInfo.cs
 /Users/Guest/Desktop/palindromesFindAndReplace/palindromesAndFR/obj/Debug/netcoreapp1.1/PalinAndFR.dll
 /Users/Guest/Desktop/palindromesFindAndReplace/palindromesAndFR/obj/Debug/netcoreapp1.1/PalinAndFR.pdb
+/Users/Guest/Desktop/CSharp-WeekTwo-Functions/palindromesAndFR/bin/Debug/netcoreapp1.1/PalinAndFR.deps.json
+/Users/Guest/Desktop/CSharp-WeekTwo-Functions/palindromesAndFR/bin/Debug/netcoreapp1.1/PalinAndFR.runtimeconfig.json
+/Users/Guest/Desktop/CSharp-WeekTwo-Functions/palindromesAndFR/bin/Debug/netcoreapp1.1/PalinAndFR.runtimeconfig.dev.json
+/Users/Guest/Desktop/CSharp-WeekTwo-Functions/palindromesAndFR/obj/Debug/netcoreapp1.1/PalinAndFR.AssemblyInfo.cs
+/Users/Guest/Desktop/CSharp-WeekTwo-Functions/palindromesAndFR/obj/Debug/netcoreapp1.1/PalinAndFR.dll
+/Users/Guest/Desktop/CSharp-WeekTwo-Functions/palindromesAndFR/obj/Debug/netcoreapp1.1/PalinAndFR.pdb
+/Users/Guest/Desktop/CSharp-WeekTwo-Functions/palindromesAndFR/bin/Debug/netcoreapp1.1/PalinAndFR.dll
+/Users/Guest/Desktop/CSharp-WeekTwo-Functions/palindromesAndFR/bin/Debug/netcoreapp1.1/PalinAndFR.pdb

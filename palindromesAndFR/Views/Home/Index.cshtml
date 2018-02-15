@@ -9,70 +9,93 @@
   </head>
 <body>
     <div class = "container">
-        <div class = "jumbotron">
-            <h1>Palindromes, FindReplace Functions</h1>
-        </div>
+      <div class = "jumbotron">
+          <h1>Week 2 Functions!</h1>
+      </div>
         <div class = "row">
-            <div class = "col-md-12">
-              <form id = "functionSelector">
-                <select class="form-control" id="function">
-                  <option value="palindromes">Palindromes</option>
-                  <option value="fr">Find and Replace</option>
-                  <option value="rpsai">Rock paper Scissors Single Player</option>
+          <div class = "col-md-12">
+            <form id = "functionSelector" method = "post" action = "/">
+              <h6><strong>Pick a Function: </strong></h6>
+              <select class="form-control" id="functionSelect">
+                <option value="palindromes">Palindromes</option>
+                <option value="fr">Find and Replace</option>
+                <option value="rpsai">Rock paper Scissors Single Player</option>
                 <option value="rps">Rock Paper Scissors Two Player</option>
-                </select>
-              </form>
-                <form id = "palindromes">
-                <div id = "inputField">
-                  <label for="inputString"><h6><strong>Input: </strong></h6></label>
-                  <input id="inputString" class="form-control" type="text" placeholder="Input:">
+                <option value="anagram">Anagram</option>
+                <option value="scrabble">Scrabble</option>
+              </select>
+                <div id = "palindromes">
+                  <label for="palindromeInputString"><h6><strong>Input a String: </strong></h6></label>
+                  <input id="palindromeInputString" class="form-control" type="text" placeholder="Input:">
                 </div>
-                <div id = "findField">
-                  <label for="findString"><h6><strong>Enter a string to Find: </strong></h6></label>
-                  <input id="findString" class="form-control" type="text" placeholder="Enter a string to Find:">
+                <div id = "fr">
+                  <label for="inputFR"><h6><strong>Input a String: </strong></h6></label>
+                  <input id="inputFR" class="form-control" type="text" placeholder="Input:">
+                  <label for="findFR"><h6><strong>Enter a string to Find: </strong></h6></label>
+                  <input id="findFR" class="form-control" type="text" placeholder="Enter a string to Find:">
+                  <label for="replaceFR"><h6><strong>Enter a string you want to replace what you found with: </strong></h6></label>
+                  <input id="replaceFR" class="form-control" type="text" placeholder="Enter a string to Find:">
                 </div>
-                <div id = "rpsPlayerOneField">
-                  <label for="rpsPlayerOne"><h6><strong>Enter what you want to replace with: </strong></h6></label>
-                  <input id="rpsPlayerOne" class="form-control" type="text" placeholder="Enter what you want to replace with:">
+                <div id = "rpsai">
+                  <h6><strong>Player One Move: </strong></h6>
+                  <select class=form-control id = "rpsPlayerOne">
+                    <option value="r">Rock</option>
+                    <option value="p">Paper</option>
+                    <option value="s">Scissors</option>
+                  </select>
                 </div>
-                <div id = "rpsPlayerTwoField">
-                  <label for="rpsPlayerTwo"><h6><strong>Enter what you want to replace with: </strong></h6></label>
-                  <input id="rpsPlayerTwo" class="form-control" type="text" placeholder="Enter what you want to replace with:">
+                <div id = "rps">
+                  <h6><strong>Player One Move: </strong></h6>
+                  <select class=form-control id = "rpsPlayerOne">
+                    <option value="r">Rock</option>
+                    <option value="p">Paper</option>
+                    <option value="s">Scissors</option>
+                  </select>
+                <h6><strong>Player Two Move: </strong></h6>
+                  <select class=form-control id = "rpsPlayerTwo">
+                    <option value="r">Rock</option>
+                    <option value="p">Paper</option>
+                  <option value="s">Scissors</option>
+                  </select>
+                </div>
+                <div id = "anagram">
+                  <label for="anagram"><h6><strong>Anagram: </strong></h6></label>
+                  <input id="anagram" class="form-control" type="text" placeholder="Enter what you want to replace with:">
+                </div>
+                <div id = "scrabble">
+                  <label for="scrabble"><h6><strong>Scrabble: </strong></h6></label>
+                  <input id="scrabble" class="form-control" type="text" placeholder="Enter what you want to replace with:">
                 </div>
                 <button type="submit" class ="btn" id="Submit">Execute</button>
-              </form>
-            </div>
-    </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" id="results">
+            <h3>This is the resultpage </h3>
+          </div>
+
+        </div>
+      </div>
+
 </body>
 <script type="text/javascript">
-var functionSelector = 0;
-
 function toggle(){
-  $("#findField").toggle();
-  $("#replaceField").toggle();
+  $("#palindromes").hide();
+  $("#fr").hide();
+  $("#rps").hide();
+  $("#anagram").hide();
+  $("#scrabble").hide();
+  $("#rpsai").hide();
+  $("#results").hide();
 }
 $(document).ready(function(){
-  $("form#palindromes").submit(function(event) {
-    event.preventDefault();
-    var findString = $("#findString").val();
-    var replaceString = $("#replaceString").val();
-
-  });
-  $("form#functionSelector").change(function(){
+  toggle();
+  $("#palindromes").show();
+  $("#functionSelect").change(function(){
     event.preventDefault();
     toggle();
-    var currFunction = $("#function").val();
-    if(currFunction == "palindromes"){
-      functionSelector = 0;
-    } else if(currFunction == "fr"){
-      functionSelector = 1;
-    }
-    });
-    $("form#palindromes").submit(function(event) {
-        event.preventDefault();
-        var playerOne = $("#rpsPlayerOne").val();
-        var playerTwo =$("#rpsPlayerTwo").val();
-    });
-
+    $("#"+$(this).val()).show();
+  });
 });
 </script>
